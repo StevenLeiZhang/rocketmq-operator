@@ -49,6 +49,8 @@ type NameServiceSpec struct {
 	HostPath string `json:"hostPath"`
 	// VolumeClaimTemplates defines the StorageClass
 	VolumeClaimTemplates []corev1.PersistentVolumeClaim `json:"volumeClaimTemplates"`
+	// The secrets used to pull image from private registry
+	ImagePullSecrets []corev1.LocalObjectReference `json:"imagePullSecrets,omitempty"`
 }
 
 // NameServiceStatus defines the observed state of NameService
